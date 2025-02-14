@@ -31,26 +31,29 @@ header {
 
 .dropMenu {
     position: relative;
+    display: inline-block;
 }
 
 .menuIcon {
     font-size: 24px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .menu {
     display: none;
     position: absolute;
-    top: 30px;
+    top: 100%; /* Posiciona o menu abaixo do ícone */
     right: 0;
-    background-color: #34495e;
+    background-color: #2c3e50;
     list-style: none;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-
+    margin: 0; /* Remove margens padrão */
+    min-width: 150px; /* Define uma largura mínima para o menu */
 }
 
 .menu li {
@@ -61,11 +64,12 @@ header {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    display: block; /* Faz o link ocupar toda a área do li */
 }
 
 .menu li a:hover {
     text-decoration: underline;
-    background-color: #2c3e50;
+    background-color: #ff3300;
     border-radius: 3px;
 }
 
